@@ -39,7 +39,7 @@
                         require_once("registration.php");
                         break;
                     case "students":
-                        require_once("StudentsController.php");
+                        require_once("controllers\StudentsController.php");
                         $studentsController = new StudentsController($_GET["action"]??"index");
                         break;
                 }

@@ -1,5 +1,7 @@
 <?php
 
+require "User.php";
+
 class Student extends User
 {
     public $id;
