@@ -43,8 +43,6 @@ require_once "entities\Student.php";
                     $surname = $_POST["surname"]??"";
                     $query = mysqli_query($db_connection, "INSERT INTO `database`.students (`name`, `surname`,`user_id`) VALUES ('$name', '$surname', '$user_id')");
                 }
-
-
             }
             include("templates/student/create.php");
         }
@@ -69,7 +67,7 @@ require_once "entities\Student.php";
 
             $db_connection = mysqli_connect("localhost", "root", "", "database");
             $query = mysqli_query($db_connection,
-                "SELECT * FROM `database`.students WHERE user_id = '{$_GET['student_id']}'");
+                "SELECT * FROM `database`.students WHERE id = '{$_GET['student_id']}'");
             $student = mysqli_fetch_assoc($query);
             include("templates/student/edit.php");
         }
